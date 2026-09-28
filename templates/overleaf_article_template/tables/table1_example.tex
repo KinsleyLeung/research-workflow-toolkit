@@ -1,0 +1,18 @@
+\begin{table}[htbp]
+\raggedright
+\caption{Example three-line table with grouped headers}
+\label{tab:example_grouped}
+\begin{threeparttable}
+\begin{tabular}{lllll}
+\toprule
+ & \multicolumn{2}{l}{Model 1} & \multicolumn{2}{l}{Model 2} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+Variable & Estimate & 95\% CI & Estimate & 95\% CI \\
+\midrule
+Predictor A & 0.00 & 0.00, 0.00 & 0.00 & 0.00, 0.00 \\
+Predictor B & 0.00 & 0.00, 0.00 & 0.00 & 0.00, 0.00 \\
+\bottomrule
+\end{tabular}
+\tablenote{Note. Replace example values with verified values exported from \texttt{results/selected/ARTICLE\_manuscript\_tables.xlsx}. CI = confidence interval.}
+\end{threeparttable}
+\end{table}

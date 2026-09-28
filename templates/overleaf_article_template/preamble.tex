@@ -1,0 +1,51 @@
+\usepackage[margin=1in]{geometry}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage{newtxtext}
+  \usepackage{newtxmath}
+\else
+  \usepackage{fontspec}
+  \IfFontExistsTF{Times New Roman}
+    {\setmainfont{Times New Roman}[Ligatures=TeX]}
+    {\setmainfont{TeX Gyre Termes}[Ligatures=TeX]}
+\fi
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{threeparttable}
+\usepackage{tabularx}
+\usepackage{adjustbox}
+\usepackage{ragged2e}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{natbib}
+\usepackage[hidelinks]{hyperref}
+
+% Default manuscript layout: 12 pt class option, Times-style font, left-aligned text.
+\AtBeginDocument{\RaggedRight}
+
+% Left-align the title block instead of the article class default centered title.
+\makeatletter
+\renewcommand{\maketitle}{%
+  \begin{flushleft}
+    {\LARGE\bfseries \@title\par}
+    \vskip 1em
+    {\large \@author\par}
+    \vskip 1em
+    {\@date\par}
+  \end{flushleft}
+}
+\makeatother
+
+% Optional local three-line table style; follow journal instructions instead when they differ.
+% Top and bottom rules are 1.5 pt; header/body and grouped-header rules are 0.5 pt.
+\setlength{\heavyrulewidth}{1.5pt}
+\setlength{\lightrulewidth}{0.5pt}
+\setlength{\cmidrulewidth}{0.5pt}
+
+\captionsetup{font=small, labelfont=bf, justification=raggedright, singlelinecheck=false}
+
+% Keep table notes compact and readable.
+\newcommand{\tablenote}[1]{\begin{tablenotes}[flushleft]\footnotesize\item #1\end{tablenotes}}
