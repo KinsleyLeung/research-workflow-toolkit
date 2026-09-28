@@ -419,7 +419,7 @@ Rules:
 - Do not invent references, DOIs, PMIDs, journal names, or publication years.
 - Use `manuscript/references.bib` as the article's citation source of truth and keep only references actually cited in the manuscript or supplement.
 - Preserve established citation keys from the team's reference manager whenever possible.
-- A reference not in Zotero may be added directly to `references.bib` after its authors, title, venue, year, DOI, URL, and document version have been checked against authoritative bibliographic sources.
+- A reference not in the team's reference manager may be added directly to `references.bib` after its authors, title, venue, year, DOI, URL, and document version have been checked against authoritative bibliographic sources.
 - Do not treat metadata verification as proof that a source supports a manuscript claim. Check the abstract, full text, original table, or official report when theoretical, methodological, psychometric, numerical, disputed, or strong novelty claims require it.
 - If using Zotero/Better BibTeX, do not configure whole-file auto-export to overwrite a bibliography containing entries added outside Zotero. Use whole-file export only when every project entry is managed in the corresponding collection.
 - Use Quarto citation syntax such as `[@citekey]` for confirmed references.

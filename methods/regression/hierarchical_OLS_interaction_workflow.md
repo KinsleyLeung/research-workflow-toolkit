@@ -10,7 +10,7 @@ The workflow standardizes analysis decisions, output files, tables, figures, and
 
 ## 2. Required analysis specification
 
-Before fitting models, create or confirm an article-level `analysis_spec.md` containing:
+Before fitting models, create or confirm an article-level `analysis_plan.md` containing:
 
 ```markdown
 Outcome:

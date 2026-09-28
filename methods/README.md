@@ -1,17 +1,19 @@
-# Methods Notes
+# Methods Library Example
 
-These documents are migrated working notes, not a peer-reviewed methods handbook. They do not yet provide a complete, source-verified protocol for every method. Before use, check the primary methodological literature, current software documentation, estimand, data structure, and registered or approved analysis plan.
+This folder demonstrates how a researcher or team can accumulate reusable method notes during real projects. It is intentionally small: keep only knowledge that has already proved useful, and adapt the structure and level of detail to local working habits.
 
-Status in this initial collection:
+The included regression material is an **example**, not a universal standard operating procedure:
 
-| Note | Current role | Required review before treating as a team SOP |
-|---|---|---|
-| `latent_profile_analysis/mplus_lpa_workflow.md` | LPA planning and reporting checklist | Verify model parameterization, class enumeration, starts, and auxiliary-variable procedures against current Mplus documentation and sources. |
-| `latent_profile_analysis/mclust_lpa_robustness.md` | Advanced robustness ideas | Predefine which diagnostics answer the question; validate implementations and cite sources. |
-| `latent_profile_analysis/mclust_sensitivity_workflow.md` | mclust comparison checklist | Verify package behavior/version and distinguish Gaussian mixtures from conventional LPA. |
-| `network_analysis.md` | Reporting orientation | Not a full estimation SOP; specify network type, estimator, tuning, uncertainty, and comparison tests per study. |
-| `regression/README.md` | Internal reporting conventions | Several table and FDR rules are team preferences, not universal requirements. |
-| `regression/hierarchical_OLS_interaction_workflow.md` | Draft execution workflow | Confirm inference, multiplicity, diagnostics, and model sequence for each design. |
-| `multilevel_models/random_intercept_contextual_workflow.md` | Adapted random-intercept/contextual association note | Verify the estimand, cluster-level exposure, number of clusters, estimation, boundary tests, and uncertainty for the study. |
+| File | Example role |
+|---|---|
+| `regression/README.md` | Local analysis and reporting conventions accumulated across projects |
+| `regression/hierarchical_OLS_interaction_workflow.md` | A more operational checklist for one recurring workflow |
 
-A method note should say what question it serves, assumptions, required inputs, decisions that must be prespecified, diagnostics, interpretation limits, software versions, and evidence sources. Avoid treating a procedure as mandatory merely because it appears here.
+Before reusing a note, verify it against the active study design, estimand, current primary methodological literature, software documentation, and target journal. Clearly distinguish:
+
+- methodological requirements supported by evidence;
+- software-specific implementation details;
+- local preferences for tables, naming, and reporting;
+- project-specific decisions that belong in `analysis_plan.md`, not here.
+
+Add another method folder only after repeated use shows that a shared note will save work or prevent a known error. A useful note should state its status, scope, assumptions, required inputs, prespecified decisions, diagnostics, interpretation limits, software/version dependencies, and evidence sources. Do not build an empty catalog in advance.

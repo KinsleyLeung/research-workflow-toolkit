@@ -1,0 +1,9 @@
+project:
+  type: default
+  output-dir: output
+
+format:
+  gfm: default
+  docx: default
+
+bibliography: references.bib

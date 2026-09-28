@@ -1,6 +1,6 @@
 # Research Workspace
 
-This directory is the installable, project-neutral workspace scaffold. Copy **its contents** into a new research directory; do not work inside the toolkit's template directory. Also copy the toolkit's `WORKFLOW.md` and `QUALITY_CONTROL.md` into that directory. The new workspace is separate from the workflow toolkit and may contain governed projects; the toolkit itself must not.
+This directory is the installable, project-neutral workspace scaffold. Normally install it with `python3 tools/workflow_toolkit.py init <target>` from the toolkit repository. For a manual installation, copy **its contents** into a new research directory and also copy the toolkit's `WORKFLOW.md` and `QUALITY_CONTROL.md`. Do not work inside the template directory. The new workspace is separate from the workflow toolkit and may contain governed projects; the toolkit itself must not.
 
 ## First setup
 

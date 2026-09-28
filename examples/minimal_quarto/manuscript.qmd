@@ -1,0 +1,17 @@
+---
+title: "Minimal Reproducible Manuscript"
+---
+
+## Purpose
+
+This data-free document verifies that one Quarto source can generate a reviewable Markdown file and a Word document. The citation is a fictional pipeline test [@exampleCitation2026].
+
+## Example Result
+
+| Analysis | Estimate | 95% CI |
+|---|---:|:---|
+| Illustrative model | 0.00 | -0.10 to 0.10 |
+
+The values above are placeholders and must not be interpreted as research findings.
+
+## References

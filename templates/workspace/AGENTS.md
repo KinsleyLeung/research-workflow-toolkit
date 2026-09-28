@@ -192,7 +192,7 @@ Read:
 7. `results/selected/` and `figures/selected/`.
 8. `shared/journal_requirements/manuscript_format_requirements.md`.
 9. The active `reference.docx`, only when generating or checking Word layout.
-10. Article `references.bib`, journal `.csl`, or Zotero records, when references are involved.
+10. Article `references.bib`, journal `.csl`, or reference-manager records, when references are involved.
 11. Article `reference_audit.md`, only when claim-level citation verification or submission auditing is involved and the file exists.
 12. Approved dataset-level Study design and Measures sources, when the active manuscript uses shared study information.
 13. An approved generic table reference and table-formatting code, only when manuscript-ready Word tables are involved and those materials exist.
@@ -352,21 +352,21 @@ Rules:
 * Use `gtsummary` for Table 1 and conventional model summaries, tidy data frames or `broom` outputs for custom models, and `flextable` for final Word table formatting.
 * Use an approved, generic table reference or the target journal's instructions when available. Never use a populated study table as a reusable visual template.
 * Implement reusable formatting rules in code only when required; render and visually verify them against an approved generic reference before relying on them.
-* Use a `reference.docx` only for document-level Word styles such as body text, headings, captions, margins, and paragraph spacing. Table appearance remains the responsibility of `flextable` and `table_style.R`.
+* Use a `reference.docx` only for document-level Word styles such as body text, headings, captions, margins, and paragraph spacing. When a validated `table_style.R` exists, use it with `flextable` for reusable table appearance; otherwise style tables within the active project and validate them before promoting the code to a shared method.
 * Convert a stable manuscript to LaTeX only when the target journal explicitly requires it. Do not use LaTeX as the default early drafting environment.
 
 ### Reference Management
 
-Use the article-specific `manuscript/references.bib` as the citation source of truth. It should contain the references actually cited in that manuscript, not a full Zotero library export.
+Use the article-specific `manuscript/references.bib` as the citation source of truth. It should contain the references actually cited in that manuscript, not a full reference-manager library export.
 
 Rules:
 
-* For references already in Zotero, preserve the existing Better BibTeX citation key whenever possible.
-* A reference not present in Zotero may be identified and bibliographically verified from authoritative sources such as the publisher, Crossref, PubMed, or an official institutional website, then added directly to `references.bib`. Downloading a PDF or importing the item into Zotero is not required merely to create a valid citation.
+* For references already in the team's reference manager, preserve the established citation key whenever possible.
+* A reference not present in the reference manager may be identified and bibliographically verified from authoritative sources such as the publisher, Crossref, PubMed, or an official institutional website, then added directly to `references.bib`. Downloading a PDF or importing the item is not required merely to create a valid citation.
 * Distinguish bibliographic verification from claim-support verification. Metadata can verify authorship, title, venue, year, DOI, and URL; it does not by itself establish that a source supports a manuscript statement.
 * For theoretical claims, method assumptions, scale properties, exact numerical claims, disputed conclusions, or strong novelty statements, inspect the abstract, full text, original table, or official report as required. If only metadata has been checked, label the citation `Metadata only` rather than `Verified`.
-* Do not enable Better BibTeX Keep Updated to overwrite a `references.bib` that also contains entries added outside Zotero. Automatic whole-file export is acceptable only when all entries in the project bibliography are managed in the corresponding Zotero collection; otherwise use explicit item export and reviewed merging.
-* A later Zotero import is optional for long-term collection. When importing a project-only entry later, preserve and verify its project citation key to avoid duplicate keys for the same work.
+* Zotero with Better BibTeX is one optional implementation. If it is used, do not enable Keep Updated to overwrite a `references.bib` that also contains entries added outside Zotero. Automatic whole-file export is acceptable only when all entries are managed in the corresponding collection; otherwise use explicit item export and reviewed merging.
+* A later import into a long-term reference manager is optional. Preserve and verify the project citation key to avoid duplicate keys for the same work.
 * Use Quarto/Pandoc citation syntax such as `[@citekey]`. Do not leave manually typed author-year citations as the final citation mechanism.
 * During drafting, standardize unresolved citations as `[CITE: concise claim or source requirement]`. Do not mix this with informal placeholders such as `[find a paper]` or final-looking author-year parentheses.
 * Before submission, replace every citation placeholder and verify bibliographic accuracy, DOI/URL completeness, duplicate records, citation-key consistency, and correspondence between in-text citations and `references.bib`.

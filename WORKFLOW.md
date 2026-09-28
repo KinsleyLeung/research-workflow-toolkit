@@ -2,6 +2,24 @@
 
 This is the stage map for a **separate research workspace** created from `templates/workspace/`. At every stage, identify the dataset, article, task, intended output, evidence available, and decision needed. Read only the material required for that task. A protocol, data-use agreement, ethics approval, registered plan, and target-journal instructions take precedence over these defaults.
 
+## Workspace information flow
+
+The workspace follows a controlled evidence path:
+
+```text
+dataset overview + data guide + approved source documents
+-> article question, state, and analysis plan
+-> scripts
+-> complete outputs in results/all and checks in results/diagnostics
+-> reviewed outputs in results/selected and figures/selected
+-> manuscript.qmd and generated review/submission files
+-> final study summary and genuinely reusable method/topic knowledge
+```
+
+For shared study-design or measure text, identify the active article's need, use the dataset source index to locate an approved snippet, fall back to the original questionnaire or codebook only when verification is required, and resolve its citation keys in the article bibliography. Do not copy an entire source library into a manuscript.
+
+Moving an output into `selected/` is a scientific decision, not a file-management shortcut. The output must be checked and consistent with the current `analysis_plan.md`; any result-informed change to the design must first be recorded as an amendment. Manuscript drafting reads `selected/` by default rather than searching `all/` for preferable results.
+
 ## Stage-based reading map
 
 | Stage | Read first in the research workspace | Do not read by default |

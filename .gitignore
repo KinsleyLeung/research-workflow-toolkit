@@ -25,6 +25,7 @@
 **/results/diagnostics/
 **/outputs/
 **/manuscript/output/
+examples/minimal_quarto/output/
 **/render_qc/
 **/quicklook*/
 *.docx
